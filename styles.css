@@ -1,0 +1,107 @@
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,500;0,600;1,400&display=swap');
+
+body {
+    background-image: url(/assets/bg.jpg);
+    background-size: cover;
+    font-family: 'Work Sans', sans-serif;
+    margin: auto;
+    width: 100vw;
+    height: 100vh;
+}
+
+.key {
+    width: 4.5rem;
+    height: 4.5rem;
+    background-color: #b3b3b39d;
+    border: 0.19rem solid #000000;
+    color: #ffde24;
+    font-weight: 400;
+    font-style: italic;
+    font-size: 0.75rem;
+    transition: all 0.07s;
+    text-shadow: 0 0px 5px #000000;
+}
+
+.key span {
+    color: #ffffff;
+    font-weight: 600;
+    font-style: normal;
+    font-size: 1rem;
+}
+
+.key:hover {
+    background-color: #000000bd;
+    cursor: pointer;
+}
+
+.key:focus {
+    outline: none;
+    box-shadow: none;
+  }
+
+.playing {
+    font-weight: 600;
+    background-color: #000000bd;
+    border-color: #ffde24;
+    box-shadow: 0 0 10px #ffde24;
+}
+
+.botoes {
+    display: flex;
+    gap: 0.8rem;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.main {
+    width: 100%;
+    height: 100%;
+    display: grid;
+    place-items: center;
+}
+
+.github {
+    position: fixed;
+    width: 2.2rem;
+    height: auto;
+    bottom: 0;
+    left: 0;
+    padding: 0 0 10px 10px;
+    animation-name: shake;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+@keyframes shake {
+    2%, 18% {
+        transform: translate3d(-5px, 0, 0);
+    }
+  
+    4%, 16% {
+        transform: translate3d(5px, 0, 0);
+    }
+  
+    6%, 10%, 14% {
+        transform: translate3d(-5px, 0, 0);
+    }
+  
+    8%, 12% {
+        transform: translate3d(5px, 0, 0);
+    }
+    
+    18.1% {
+        transform: translate3d(0px, 0, 0);
+    }
+}
+
+.github:hover {
+    cursor: pointer;
+    filter: brightness(0.5);
+}
+
+@media (max-width: 400px) {
+    .botoes {
+        gap: 1rem;
+    }
+}
